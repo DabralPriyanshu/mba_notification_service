@@ -7,7 +7,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 const ticketRoutes = require("./src/routes/ticket.routes");
 ticketRoutes(app);
-app.get("/ping", (res, res) => {
+app.get("/ping", (req, res) => {
   res
     .status(200)
     .json({ success: true, message: "Notification_Service is alive", err: {} });
